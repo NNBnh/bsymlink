@@ -41,8 +41,10 @@ ln -s ~/.local/share/bsymlink/bsymlink ~/.local/bin/bsymlink
 Run `bsymlink` in the terminal:
 
 ```sh
-bsymlink path/to/d path/to/t [path/to/trash]
+bsymlink path/to/directory path/to/target [path/to/trash]
 ```
+
+###### The default trash's path is `~/.local/share/Trash/files`
 
 <br><br><br><br>
 
