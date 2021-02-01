@@ -61,4 +61,4 @@ mkdir -p "$TRASH"
 scan_directory "$DIRECTORY"
 
 
-exit 0
+exit 0 # 64!!!
