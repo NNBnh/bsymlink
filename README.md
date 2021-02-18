@@ -1,6 +1,6 @@
 <h1 align="center"><code>bsymlink</code></h1>
 <p align="center">Batch symlink tool that <i>SuperB</i></p>
-<p align="center"><img src="https://img.shields.io/github/license/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"> <img src="https://img.shields.io/github/languages/top/NNBnh/bsymlink?logo=gnu-bash&labelColor=073551&color=4EAA25&logoColor=FFFFFF&style=for-the-badge" alt="Shell: 100%"> <img src="https://img.shields.io/badge/development-completed-%234EAA25.svg?labelColor=073551&style=for-the-badge&logoColor=FFFFFF" alt="Development completed"></p>
+<p align="center"><img src="https://img.shields.io/github/license/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"> <img src="https://img.shields.io/badge/development-completed-%234EAA25.svg?labelColor=073551&style=for-the-badge&logoColor=FFFFFF" alt="Development completed"></p>
 <p align="center"><img src="https://img.shields.io/github/watchers/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/stars/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/forks/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/issues/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></p>
 
 ## About
@@ -35,7 +35,19 @@ ln -s ~/.local/share/bsymlink/bsymlink ~/.local/bin/bsymlink
 ```
 
 #### Package manager
-`#TODO`
+For [`bpkg`](https://github.com/bpkg/bpkg) user:
+
+```sh
+bpkg install NNBnh/bsymlink
+```
+
+For [Basher](https://github.com/bpkg/bpkg) user:
+
+```sh
+basher install NNBnh/bsymlink
+```
+
+###### If you can and want to port Bsymlink to other package managers, feel free to do so.
 
 ## Usage
 Run `bsymlink` in the terminal:
