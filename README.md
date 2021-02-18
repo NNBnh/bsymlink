@@ -4,7 +4,7 @@
 <p align="center"><img src="https://img.shields.io/github/watchers/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/stars/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/forks/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/issues/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></p>
 
 ## About
-`bsymlink` is *SuperB* batch symlink tool written in [exactly **64** lines](https://github.com/NNBnh/bsymlink/blob/main/bsymlink#L64) of [`pure sh`](https://github.com/dylanaraps/pure-sh-bible). But unlike [**Stow**](https://www.gnu.org/software/stow), it can move conflict files to the trash.
+`bsymlink` is a *SuperB* batch symlink tool written in [exactly **64** lines](https://github.com/NNBnh/bsymlink/blob/main/bsymlink#L64) of [`pure sh`](https://github.com/dylanaraps/pure-sh-bible). But unlike [**Stow**](https://www.gnu.org/software/stow), it can move conflict files to the trash.
 
 ## Contents
 - [About](#about)
