@@ -1,0 +1,10 @@
+
+{
+  "name": "bsymlink",
+  "version": "1.0.1",
+  "description": "Batch symlink tool that SuperB",
+  "global": "true",
+  "scripts": ["bin/bsymlink"],
+  "files": ["man/bsymlink.1"],
+  "install": "make install"
+}
