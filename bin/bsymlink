@@ -46,10 +46,10 @@ scan_directory() {
 			if [ -d "$target" ] && [ ! -h "$target" ]; then
 				scan_directory "$file"
 			else
-				mv "$target" "$TRASH/" && ln -s "$file" "$target"
+				mv -f "$target" "$TRASH/" && ln -sf "$file" "$target"
 			fi
 		else
-			ln -s "$file" "$target"
+			ln -sf "$file" "$target"
 		fi
 	done
 }
