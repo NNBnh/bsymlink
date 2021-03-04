@@ -1,7 +1,7 @@
 <h1 align="center"><code>bsymlink</code></h1>
 <p align="center">Batch symlink tool that <i>SuperB</i></p>
-<p align="center"><img src="https://img.shields.io/github/license/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"> <img src="https://img.shields.io/badge/development-completed-%234EAA25.svg?labelColor=073551&style=for-the-badge&logoColor=FFFFFF" alt="Development completed"></p>
-<p align="center"><img src="https://img.shields.io/github/watchers/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/stars/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/forks/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/issues/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></p>
+<p align="center"><a href="https://github.com/NNBnh/bsymlink/blob/main/LICENSE"><img src="https://img.shields.io/github/license/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"></a> <img src="https://img.shields.io/badge/development-completed-%234EAA25.svg?labelColor=073551&style=for-the-badge&logoColor=FFFFFF" alt="Development completed"></p>
+<p align="center"><a href="https://github.com/NNBnh/bsymlink/watchers"><img src="https://img.shields.io/github/watchers/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/stargazers"><img src="https://img.shields.io/github/stars/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/network/members"><img src="https://img.shields.io/github/forks/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/issues"><img src="https://img.shields.io/github/issues/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a></p>
 
 ## About
 `bsymlink` is a *SuperB* batch symlink tool written in [exactly **64** lines](https://github.com/NNBnh/bsymlink/blob/main/bsymlink#L64) of [`portable sh`](https://github.com/dylanaraps/pure-sh-bible). But unlike [**Stow**](https://www.gnu.org/software/stow), it can move conflict files to the trash.
@@ -23,7 +23,7 @@
 - Option 1: using `curl`
 
 ```sh
-curl https://raw.githubusercontent.com/NNBnh/bsymlink/main/bsymlink > ~/.local/bin/bsymlink
+curl https://raw.githubusercontent.com/NNBnh/bsymlink/main/bin/bsymlink > ~/.local/bin/bsymlink
 chmod +x ~/.local/bin/bsymlink
 ```
 
@@ -31,7 +31,7 @@ chmod +x ~/.local/bin/bsymlink
 
 ```sh
 git clone https://github.com/NNBnh/bsymlink.git ~/.local/share/bsymlink
-ln -s ~/.local/share/bsymlink/bsymlink ~/.local/bin/bsymlink
+ln -s ~/.local/share/bsymlink/bin/bsymlink ~/.local/bin/bsymlink
 ```
 
 #### Package manager
@@ -62,6 +62,6 @@ bsymlink path/to/directory path/to/target [path/to/trash]
 
 ---
 
-> <h1 align="center">Made with :heart: by <a href="https://github.com/NNBnh"><i>NNB</i></a></h1>
+> <h1 align="center">Made with ❤️ by <a href="https://github.com/NNBnh"><i>NNB</i></a></h1>
 >
 > <p align="center"><a href="https://www.buymeacoffee.com/nnbnh"><img src="https://img.shields.io/badge/buy_me_a_coffee%20-%23F7CA88.svg?logo=buy-me-a-coffee&logoColor=333333&style=for-the-badge" alt="Buy Me a Coffee"></p>
