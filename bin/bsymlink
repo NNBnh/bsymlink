@@ -28,8 +28,8 @@
 
 
 # Values
-DIRECTORY=$(realpath "${1:-$PWD}")
-TARGET=$(realpath "${2:-$HOME}")
+DIRECTORY="${1:-$PWD}"
+TARGET="${2:-$HOME}"
 TRASH="${3:-${XDG_DATA_HOME:-$HOME/.local/share}/Trash/files}"
 
 
