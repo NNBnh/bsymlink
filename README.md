@@ -4,7 +4,7 @@
 <p align="center"><a href="https://github.com/NNBnh/bsymlink/watchers"><img src="https://img.shields.io/github/watchers/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/stargazers"><img src="https://img.shields.io/github/stars/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/network/members"><img src="https://img.shields.io/github/forks/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/issues"><img src="https://img.shields.io/github/issues/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a></p>
 
 ## About
-`bsymlink` is a *SuperB* batch symlink tool written in [exactly **64** lines](https://github.com/NNBnh/bsymlink/blob/main/bsymlink#L64) of [`portable sh`](https://github.com/dylanaraps/pure-sh-bible). But unlike [**Stow**](https://www.gnu.org/software/stow), it can move conflict files to the trash.
+`bsymlink` is a *SuperB* batch symlink tool written in  [`portable sh`](https://github.com/dylanaraps/pure-sh-bible). But unlike [**Stow**](https://www.gnu.org/software/stow), it can handle conflict files like move it to the trash or delete it.
 
 ## Contents
 - [About](#about)
@@ -13,6 +13,8 @@
   - [Dependencies](#dependencies)
   - [Installation](#installation)
 - [Usage](#usage)
+- [Configuration](#configuration)
+- [Credits](#credits)
 
 ## Setup
 ### Dependencies
@@ -56,7 +58,44 @@ Run `bsymlink` in the terminal:
 bsymlink path/to/directory path/to/target [path/to/trash]
 ```
 
+## Configuration
+This is the default handle conflict command:
+
+```sh
+BSYMLINK_HANDLE="handle_conflict \"\$target\""
+```
+
+it's use this builtin `handle_conflict` function:
+
+```sh
+BSYMLINK_TRASH_PATH="${BSYMLINK_TRASH_PATH:-${XDG_DATA_HOME:-$HOME/.local/share}/Trash/files}"
+
+handle_conflict() {
+	mkdir -p "$TRASH_PATH"
+	rm -rf "$TRASH_PATH/$(basename "$target")" 2>&-
+	mv -f "$target" "$TRASH_PATH/"
+}
+```
+
 ###### The default trash's path is `~/.local/share/Trash/files`
+
+You can change it through environment variables: `export BSYMLINK_HANDLE="<command>"`
+
+###### Keep in mind that the `<method>` will be run through `eval` (e.g: `// => /`)
+
+Examples:
+
+```sh
+BSYMLINK_HANDLE="rm -rf \"\$target\""
+```
+
+```sh
+BSYMLINK_HANDLE="trash \"\$target\""
+```
+
+## Credits
+Special thanks to:
+- [**Stow**](https://www.gnu.org/software/stow) by [GNU](https://www.gnu.org)
 
 <br><br><br><br>
 

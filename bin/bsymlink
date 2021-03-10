@@ -30,7 +30,10 @@
 # Values
 DIRECTORY="${1:-$PWD}"
 TARGET="${2:-$HOME}"
-TRASH="${3:-${XDG_DATA_HOME:-$HOME/.local/share}/Trash/files}"
+
+BSYMLINK_HANDLE="handle_conflict \"\$target\""
+
+BSYMLINK_TRASH_PATH="${BSYMLINK_TRASH_PATH:-${XDG_DATA_HOME:-$HOME/.local/share}/Trash/files}"
 
 
 # Functions
@@ -46,7 +49,8 @@ scan_directory() {
 			if [ -d "$target" ] && [ ! -h "$target" ]; then
 				scan_directory "$file"
 			else
-				mv -f "$target" "$TRASH/" && ln -sf "$file" "$target"
+				eval "$BSYMLINK_HANDLE"
+				ln -sf "$file" "$target"
 			fi
 		else
 			ln -sf "$file" "$target"
@@ -54,11 +58,15 @@ scan_directory() {
 	done
 }
 
+handle_conflict() {
+	mkdir -p "$BSYMLINK_TRASH_PATH"
+	rm -rf "$BSYMLINK_TRASH_PATH/$(basename "$target")" 2>&-
+	mv -f "$target" "$BSYMLINK_TRASH_PATH/"
+}
+
 
 # Start
-mkdir -p "$TRASH"
-
 scan_directory "$DIRECTORY"
 
 
-exit 0 # 64!!!
+exit 0
