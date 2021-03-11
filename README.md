@@ -85,9 +85,13 @@ You can change it through environment variables: `export BSYMLINK_HANDLE="<comma
 
 Examples:
 
+Delete conflict files:
+
 ```sh
 BSYMLINK_HANDLE="rm -rf \"\$target\""
 ```
+
+Using [Trash-CLI](https://github.com/andreafrancia/trash-cli)
 
 ```sh
 BSYMLINK_HANDLE="trash \"\$target\""
