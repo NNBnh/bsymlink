@@ -91,7 +91,7 @@ Delete conflict files:
 BSYMLINK_HANDLE="rm -rf \"\$target\""
 ```
 
-Using [Trash-CLI](https://github.com/andreafrancia/trash-cli)
+Using [Trash-CLI](https://github.com/andreafrancia/trash-cli):
 
 ```sh
 BSYMLINK_HANDLE="trash \"\$target\""
