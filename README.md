@@ -3,25 +3,15 @@
 <p align="center"><a href="https://github.com/NNBnh/bsymlink/blob/main/LICENSE"><img src="https://img.shields.io/github/license/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"></a> <img src="https://img.shields.io/badge/development-completed-%234EAA25.svg?labelColor=073551&style=for-the-badge&logoColor=FFFFFF" alt="Development completed"></p>
 <p align="center"><a href="https://github.com/NNBnh/bsymlink/watchers"><img src="https://img.shields.io/github/watchers/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/stargazers"><img src="https://img.shields.io/github/stars/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/network/members"><img src="https://img.shields.io/github/forks/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/issues"><img src="https://img.shields.io/github/issues/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a></p>
 
-## About
+## 💡 About
 `bsymlink` is a *SuperB* batch symlink tool written in  [`portable sh`](https://github.com/dylanaraps/pure-sh-bible). But unlike [**Stow**](https://www.gnu.org/software/stow), it can handle conflict files like move it to the trash or delete it.
 
-## Contents
-- [About](#about)
-- [Contents](#contents)
-- [Setup](#setup)
-  - [Dependencies](#dependencies)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Credits](#credits)
-
-## Setup
-### Dependencies
+## 🚀 Setup
+### 🧾 Dependencies
 - `sh` to process
 
-### Installation
-#### Manually
+### 📥 Installation
+#### 🔧 Manually
 - Option 1: using `curl`
 
 ```sh
@@ -36,7 +26,7 @@ git clone https://github.com/NNBnh/bsymlink.git ~/.local/share/bsymlink
 ln -s ~/.local/share/bsymlink/bin/bsymlink ~/.local/bin/bsymlink
 ```
 
-#### Package manager
+#### 📦 Package manager
 For [`bpkg`](https://github.com/bpkg/bpkg) user:
 
 ```sh
@@ -49,16 +39,16 @@ For [Basher](https://github.com/bpkg/bpkg) user:
 basher install NNBnh/bsymlink
 ```
 
-###### If you can and want to port Bsymlink to other package managers, feel free to do so.
+> *If you can and want to port Bsymlink to other package managers, feel free to do so.*
 
-## Usage
+## ⌨️ Usage
 Run `bsymlink` in the terminal:
 
 ```sh
 bsymlink path/to/directory path/to/target [path/to/trash]
 ```
 
-## Configuration
+## ⚙️ Configuration
 This is the default handle conflict command:
 
 ```sh
@@ -77,11 +67,11 @@ handle_conflict() {
 }
 ```
 
-###### The default trash's path is `~/.local/share/Trash/files`
+> *The default trash's path is `~/.local/share/Trash/files`*
 
 You can change it through environment variables: `export BSYMLINK_HANDLE="<command>"`
 
-###### Keep in mind that the `<method>` will be run through `eval` (e.g: `// => /`)
+> *Keep in mind that the `<method>` will be run through `eval` (e.g: `// => /`)*
 
 Examples:
 
@@ -97,7 +87,7 @@ Using [Trash-CLI](https://github.com/andreafrancia/trash-cli):
 BSYMLINK_HANDLE="trash \"\$target\""
 ```
 
-## Credits
+## 💌 Credits
 Special thanks to:
 - [**Stow**](https://www.gnu.org/software/stow) by [GNU](https://www.gnu.org)
 
