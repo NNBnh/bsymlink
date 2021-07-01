@@ -1,7 +1,6 @@
 <h1 align="center"><code>bsymlink</code></h1>
 <p align="center">Batch symlink tool that <i>SuperB</i></p>
 <p align="center"><a href="https://github.com/NNBnh/bsymlink/blob/main/LICENSE"><img src="https://img.shields.io/github/license/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"></a> <a href="https://gist.github.com/NNBnh/9ef453aba3efce26046e0d3119dab5a7#development-completed"><img src="https://img.shields.io/badge/development-completed-%234EAA25.svg?labelColor=073551&style=for-the-badge&logoColor=FFFFFF" alt="Development completed"></a></p>
-<p align="center"><a href="https://github.com/NNBnh/bsymlink/watchers"><img src="https://img.shields.io/github/watchers/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/stargazers"><img src="https://img.shields.io/github/stars/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/network/members"><img src="https://img.shields.io/github/forks/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/bsymlink/issues"><img src="https://img.shields.io/github/issues/NNBnh/bsymlink?labelColor=073551&color=4EAA25&style=flat-square"></a></p>
 
 ## 💡 About
 `bsymlink` is a *SuperB* batch symlink tool written in  [`portable sh`](https://github.com/dylanaraps/pure-sh-bible). But unlike [**Stow**](https://www.gnu.org/software/stow), it can handle conflict files like move it to the trash or delete it.
